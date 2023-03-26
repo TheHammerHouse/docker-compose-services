@@ -1,0 +1,6 @@
+FROM postgres:latest
+
+COPY ./shippingDBInit.sql /docker-entrypoint-initdb.d/initDB.sql
+
+# Set the default command to run the Postgres server on port 5433
+CMD ["postgres", "-p", "5433"]

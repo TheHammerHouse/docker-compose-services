@@ -1,0 +1,5 @@
+FROM postgres:latest
+
+COPY ./paymentDBInit.sql /docker-entrypoint-initdb.d/initDB.sql
+
+CMD ["postgres"]
