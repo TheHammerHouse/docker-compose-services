@@ -6,7 +6,7 @@ FILENAME=""
 
 if [ "$ARCH" == "x86_64" ]; then
     FILENAME="docker-compose_intel.yml"
-elif [ "$ARCH" == "arm64" ]; then
+elif [ "$ARCH" == "arm64" ] || [ "$ARCH" == "aarch64" ]; then
     FILENAME="docker-compose_arm.yml"
 else
     echo "We are unable to build the containers for the following architecture: $ARCH"
